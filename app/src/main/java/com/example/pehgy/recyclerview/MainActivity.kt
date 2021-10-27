@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 
-import com.example.pehgy.recyclerview.R.id.recyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,13 +19,15 @@ class MainActivity : AppCompatActivity() {
             val datas = mutableListOf<Info>(
 
                 Info("標題一", "123456789"),
-                Info("標題二", "987654321")
+                Info("標題二", "987654321"),
+                Info("標題三", "000000000"),
+                Info("標題四", "111111111")
 
 
             )
             return datas
         }
-        val myadapter = MainAdapter(this,getInfoList())
+        val myadapter = MyAdapter(this,getInfoList())
         recyclerView.adapter = myadapter
         recyclerView.layoutManager = LinearLayoutManager(this)
     }

@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recycler_view.view.*
 
-class MainAdapter(context: Context,var infoList: List<Info>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MyAdapter(context: Context, var infoList: List<Info>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     //建立每一個項目，這邊需要把recycler_view.xml中的項目找出來並回傳
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_view, parent, false)
         return ViewHolder(view)
     }
 
